@@ -1,0 +1,185 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+
+\title{Code Style}
+\author{Elizaweta Chernova ; IA-031 ;}
+\affil{SibSUTIS, email: elizaweta\_02@mail.ru .}
+\date{January 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document contains my code style guide .
+\section{Programming languages used}.
+\textbf{\large{C++\cite{CPP}}}\\
+\section{Code-Style for C++} 
+\textbf{\large{Function Declarations and Definitions\cite{CPP1}}}\\
+Return type on the same line as function name, parameters on the same line. \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+ReturnType FunctionName(type1 name1, type2 name2)\ \{ \\ 
+\ \ \ \ DoSomething(); \\
+\ \ \ \ ...\\ 
+\} \\ \\
+\hline
+\end{tabular}\\ \\ \\ 
+\textbf{\large{Function Calls}}\\
+Write the call all on a single line, wrap the arguments at the parenthesis\\ 
+
+\begin{tabular}{|p{300}|}
+\hline\\
+int result = DoSomething(argument1, argument2, argument3); \\ \\
+\hline
+\end{tabular}\\ \\ \\ \\
+\textbf{\large{Comment Style\cite{CPP3}}}\\
+The syntax uses // or /* */ , but /* */ is used less often, only when you need to encode a large section of code or description. \\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+//this section calculates the factorial\\ \\
+/*this section calculates the factorial*/\\ \\
+\hline 
+\end{tabular}\\ \\ \\
+\textbf{\large{Whitespaces}}\\
+Open braces should always have a space before them and two spaces before end-of-line comments. \\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+void function(int b) \{  // function for ...\\\\
+\hline 
+\end{tabular}\\ \\ \\
+Semicolons usually have no space before them.\\
+Assignment operators always have spaces around them.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+int i = 0;\\\\
+\hline 
+\end{tabular}\\ \\ \\
+Other binary operators usually have spaces around them.\\
+Parentheses should have no internal padding.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+x = a * b + (c / d);\\\\
+\hline 
+\end{tabular}\\ \\ \\ \\
+No spaces separating unary operators and their arguments.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+x = -5;\\
+x++;\\
+if (x\ \&\&\ \!y)\\
+  ...\\\\
+\hline 
+\end{tabular}\\ \\ \\
+\textbf{\large{Variable Names}}\\
+Ordinarily, functions should start with a capital letter and have a capital letter for each new word.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+AddTableName()\\
+DeleteString()\\
+OpenNewFile()\\\\
+\hline 
+\end{tabular}\\ \\ \\
+Variables declared const are named with a leading "k" followed by mixed case.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+const int kDaysInAWeek = 7;\\\\
+\hline 
+\end{tabular}\\ \\ \\
+Each variable is declared on a new line.\\
+Variables can be enumerated in a string if they are of the same type.\\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+int a;\\
+float b;\\
+char d, e, f;\\\\
+\hline 
+\end{tabular}\\ \\ \\
+\textbf{\large{Conditional statements\cite{CPP2}}}\\
+Put one space between the if and the opening parenthesis, and between the closing parenthesis and the curly brace (if any)\\
+Use curly braces for the controlled statements following if, else if and else. Break the line immediately after the opening brace, and immediately before the closing brace. A subsequent else, if any, appears on the same line as the preceding closing brace, separated by a space.\\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+if (condition) \{\\                   
+\ \ DoOneThing();\\                    
+\ \ DoAnotherThing();\\
+\} else if (int a = f(); a != 3) \{\\   
+  DoAThirdThing(a);\\
+\ \ \} else \{\\
+\ \ DoNothing();\\
+\ \ \}\\ \\
+\hline 
+\end{tabular}\\ \\ \\
+\textbf{\large{Loops Statements}}\\
+The closing curly brace is always written in line with for/while\\
+Braces are optional for single-statement loops.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+for (int i = 0; i < kSomeNumber; ++i) \{ \\
+\ \ printf("my dog is angry"); \\
+\} \\
+for (int i = 0; i < kSomeNumber; ++i) \\
+\ \ printf("hello world\n"); \\
+\\
+while (1) \{\\
+\ \ DoSomething();\\
+\} \\
+\hline
+\end{tabular}\\ \\ \\ 
+\textbf{\large {Assigning a text value to a string}}\\ \\
+Text is written to a variable of type string with quotation marks.\\
+There is no space between the word and the quotation marks.\\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+string str = "Hello world";\\ \\
+\hline
+\end{tabular}\\ \\ \\
+\textbf{\large {Output on display}}\\ \\
+Screen output with the cout statementю
+Text are always preceded by a space on both sides \ll \\ \\
+
+\begin{tabular}{|p{300}|}
+\hline\\
+cout \ll "a =" \ll a \ll endl ;\\ \\
+\hline 
+\end{tabular}\\ \\ \\ 
+
+
+
+
+\section{Conclusion}
+\large{I learned how to use Latex commands and learned how to work with them, I also made Code style, which will help to beautifully and correctly format the program code}\\
+\hline
+\begin{thebibliography}{4}
+\bibitem{CPP}
+ISO/IEC 14882 Programming languages — C++.
+\bibitem{CPP1}
+Google C++ Style Guide : [electronic resource].
+URL : https://google.github.io/styleguide/cppguide.html
+\bibitem{CPP2}
+C++ Code Design Guide from Stanford University. : [electronic resource]. 
+URL : https://tproger.ru/translations/stanford-cpp-style-guide/
+\bibitem{CPP3}
+Lesson number 9. Comments. : [electronic resource]. 
+URL : https://ravesli.com/urok-9-kommentarii-v-s/#toc-2
+
+
+\end{thebibliography}
+
+\end{document}
